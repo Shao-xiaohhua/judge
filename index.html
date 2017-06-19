@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>判断浏览器</title>
+    <style>
+        .one {
+            width: 100%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 50px;
+            color: #7a7a7a;
+            display: none;
+        }
+    </style>
+
+    <!--<script>-->
+        <!--window.onload = function(){-->
+            <!--var one = document.getElementsByClassName('one')[0];-->
+            <!--function myBrowser(){-->
+                <!--var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串-->
+                <!--var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器-->
+                <!--var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器-->
+                <!--var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器-->
+                <!--var isSafari = userAgent.indexOf("Safari") > -1; //判断是否Safari浏览器-->
+                <!--if (isIE) {-->
+                    <!--var IE5 = IE55 = IE6 = IE7 = IE8 = false;-->
+                    <!--var reIE = new RegExp("MSIE (\\d+\\.\\d+);");-->
+                    <!--reIE.test(userAgent);-->
+                    <!--var fIEVersion = parseFloat(RegExp["$1"]);-->
+                    <!--IE55 = fIEVersion == 5.5;-->
+                    <!--IE6 = fIEVersion == 6.0;-->
+                    <!--IE7 = fIEVersion == 7.0;-->
+                    <!--IE8 = fIEVersion == 8.0;-->
+                    <!--if (IE55) {-->
+                        <!--return "IE55";-->
+                    <!--}-->
+                    <!--if (IE6) {-->
+                        <!--return "IE6";-->
+                    <!--}-->
+                    <!--if (IE7) {-->
+                        <!--return "IE7";-->
+                    <!--}-->
+                    <!--if (IE8) {-->
+                        <!--return "IE8";-->
+                    <!--}-->
+                <!--}//isIE end-->
+                <!--if (isFF) {-->
+                    <!--return "FF";-->
+                <!--}-->
+                <!--if (isOpera) {-->
+                    <!--return "Opera";-->
+                <!--}-->
+            <!--}//myBrowser() end-->
+<!--//以下是调用上面的函数-->
+<!--//            if (myBrowser() == "FF") {-->
+<!--//                alert("我是 Firefox");-->
+<!--//            }-->
+<!--//            if (myBrowser() == "Opera") {-->
+<!--//                alert("我是 Opera");-->
+<!--//            }-->
+<!--//            if (myBrowser() == "Safari") {-->
+<!--//                alert("我是 Safari");-->
+<!--//            }-->
+            <!--if (myBrowser() == "IE55") {-->
+                <!--one.style.display = "block";-->
+              <!--window.location.href="https://www.baidu.com";-->
+            <!--}-->
+            <!--if (myBrowser() == "IE6") {-->
+                <!--one.style.display = "block";-->
+              <!--window.location.href="https://www.baidu.com";-->
+            <!--}-->
+            <!--if (myBrowser() == "IE7") {-->
+               <!--one.style.display = "block";-->
+              <!--window.location.href="https://www.baidu.com";-->
+            <!--}-->
+            <!--if (myBrowser() == "IE8") {-->
+                <!--one.style.display = "block";-->
+              <!--window.location.href="https://www.baidu.com";-->
+            <!--}-->
+            <!--if(browser.versions.mobile===true) {-->
+                <!--one.style.innerHTML = "请您马上下载我们的APP谢谢合作";-->
+            <!--}-->
+            <!--}-->
+        <!--var browser={-->
+            <!--versions:function(){-->
+                <!--var u = navigator.userAgent, app = navigator.appVersion;-->
+                <!--return {//移动终端浏览器版本信息-->
+                    <!--trident: u.indexOf('Trident') > -1, //IE内核-->
+                    <!--presto: u.indexOf('Presto') > -1, //opera内核-->
+                    <!--webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核-->
+                    <!--gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核-->
+                    <!--mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端-->
+                    <!--ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端-->
+                    <!--android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器-->
+                    <!--iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器-->
+                    <!--iPad: u.indexOf('iPad') > -1, //是否iPad-->
+                    <!--webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部-->
+                <!--};-->
+            <!--}(),-->
+            <!--language:(navigator.browserLanguage || navigator.language).toLowerCase()-->
+        <!--}-->
+
+    <!--</script>-->
+    <!--<script type="text/javascript">-->
+        <!--/*-->
+         <!--* 智能机浏览器版本信息:-->
+         <!--*-->
+         <!--*/-->
+        <!--var browser={-->
+            <!--versions:function(){-->
+                <!--var u = navigator.userAgent, app = navigator.appVersion;-->
+                <!--return {//移动终端浏览器版本信息-->
+                    <!--trident: u.indexOf('Trident') > -1, //IE内核-->
+                    <!--presto: u.indexOf('Presto') > -1, //opera内核-->
+                    <!--webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核-->
+                    <!--gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核-->
+                    <!--mobile: !!u.match(/AppleWebKit.*Mobile.*/)||!!u.match(/AppleWebKit/), //是否为移动终端-->
+                    <!--ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端-->
+                    <!--android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器-->
+                    <!--iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器-->
+                    <!--iPad: u.indexOf('iPad') > -1, //是否iPad-->
+                    <!--webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部-->
+                <!--};-->
+            <!--}(),-->
+            <!--language:(navigator.browserLanguage || navigator.language).toLowerCase()-->
+        <!--}-->
+        <!--document.writeln("语言版本: "+browser.language);-->
+        <!--document.writeln(" 是否为移动终端: "+browser.versions.mobile);-->
+        <!--document.writeln(" ios终端: "+browser.versions.ios);-->
+        <!--document.writeln(" android终端: "+browser.versions.android);-->
+        <!--document.writeln(" 是否为iPhone: "+browser.versions.iPhone);-->
+        <!--document.writeln(" 是否iPad: "+browser.versions.iPad);-->
+        <!--document.writeln(navigator.userAgent);-->
+        <!--var one = document.getElementsByClassName('one')[0];-->
+        <!--window.onload = function(){-->
+
+        <!--}-->
+
+    <!--</script>-->
+  <script>
+    window.onload = function (){
+      var isIE=!!window.ActiveXObject;
+      var isIE6=isIE&&!window.XMLHttpRequest;
+      var isIE8=isIE&&!!document.documentMode;
+      var isIE7=isIE&&!isIE6&&!isIE8;
+      if (isIE){
+        if (isIE6){
+          alert("ie6");
+        }else if (isIE8){
+          alert("ie8");
+        }else if (isIE7){
+          alert("ie7");
+        }
+      }
+    }
+
+  </script>
+</head>
+<body>
+<!--[if IE 7]><h2>版本 7</h2><![endif]-->
+<div class="one">
+    您的浏览器需要升级了！！！
+</div>
+<!--[if IE]>
+<h1>您正在使用IE浏览器</h1>
+<!--[if it IE 5]>
+    <h2>版本 5</h2>
+<![endif]-->
+<!--[if it IE 5.0]>
+<h2>版本 5.0</h2>
+<![endif]-->
+<!--[if IE 5.5]>
+<h2>版本 5.5</h2>
+<![endif]-->
+<!--[if it IE 6]>
+<h2>版本 6</h2>
+<![endif]-->
+<!--[if IE 7]>
+<h2>版本 7</h2>
+<![endif]-->
+<![endif]-->
+<!--[if IE]-->
+</body>
+</html>
